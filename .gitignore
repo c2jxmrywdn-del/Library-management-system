@@ -30,8 +30,7 @@ replay_pid*
 
 # ---------- Build output ----------
 target/
-out/artifacts/xianfeng_bookstore_war_exploded/
-out/artifacts/unnamed_archive/
+out/
 out/production/
 
 # ---------- OS ----------
