@@ -1,0 +1,33 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /api
+
+spring:
+  application:
+    name: xianfeng-bookstore
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    # 请按本机实际情况修改数据库地址、账号、密码
+    url: jdbc:mysql://localhost:3306/xianfeng_bookstore?useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai&useSSL=false&allowPublicKeyRetrieval=true
+    username: root
+    password: Root666.
+  servlet:
+    session:
+      timeout: 30m
+
+# MyBatis-Plus 配置
+mybatis-plus:
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: com.xianfeng.bookstore.entity
+  configuration:
+    map-underscore-to-camel-case: true
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  global-config:
+    db-config:
+      id-type: auto
+
+# 日志
+logging:
+  level:
+    com.xianfeng.bookstore: debug
